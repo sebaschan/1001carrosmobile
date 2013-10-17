@@ -162,3 +162,34 @@ a:hover.btn 							{ text-decoration:none; border:1px solid #000; color:#666; ba
 
 a.btn-form, input.btn-form				{ padding:4px 28px 4px 8px; display:inline-block; font-size:11px; color:#fff; border:1px solid #444; background:#333 url(../images/btn-arrow.png) no-repeat right; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; cursor:pointer; width:100% }
 .small-label							{ display:block; font-size:10px; font-weight:normal; color:#666; text-align:right; width:140px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titu1 {
+  background: none repeat scroll 0 0 #F9E200;
+    color: #4B4B4B;
+    font-size: 19px;
+    height: 50px;
+}
+
+.menudo1 {
+  background: none repeat scroll 0 0 #FFFFFF;
+  font-size: 180%;
+  height: 65px;
+  padding: 20px 0 0;
+}
+hr {
+  color: #FFFFFF;
+}
