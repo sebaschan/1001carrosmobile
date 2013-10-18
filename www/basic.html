@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Example</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">       
+			
+			function traerdatos(){
+				var opciones = {clave: $("#clave").val()};
+				//despues mando llamar a la función .get enviando a PHP mi objeto opciones.
+				$.get(
+					"http://www.tebusco.com.ec/webservice/index.php",
+					opciones,
+					function(inyeccion){
+						document.write(inyeccion.nombre);
+					},
+					"json"
+				);
+			}
+			traerdatos();
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>
+
