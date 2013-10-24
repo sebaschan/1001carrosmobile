@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Buscador</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">       
+			
+			function cargarMarca(){				
+				
+				
+				$("#resultadoMarca").html('buscando...');
+				var opciones = {clave: $("#clave").val()};
+				//despues mando llamar a la función .get enviando a PHP mi objeto opciones.
+				$.get(
+					"http://1001carros.com.previewyoursites.com/buscarMarcaTB.php",
+					opciones,
+					function(inyeccion){
+						$("#resultadoMarca").html(inyeccion.marcas);
+					},
+					"json"
+				);
+			}
+			
+			function cargarModelo(){
+			//    alert($j('#marca option:selected').html());
+				var data={
+					nombreMarca:$('#marca option:selected').html()
+				}
+				var urllista = "http://1001carros.com.previewyoursites.com/buscarModeloTB.php";
+			//var urllista = "http://localhost/magento/buscarModelo.php";
+				$("#resultadoModelo").html('buscando...');
+				$("#resultadoModelo").load(urllista,data, function(){ if("") {(nombreMarca)} });
+			}
+			cargarMarca();
+    </script>
+</head>
+<body>
+
+<div class="row">
+    <div id="resultadoMarca">
+        buscando....
+    </div>
+    <div id="resultadoModelo">
+        
+    </div>
+</div>
+
+
+</body>
+</html>
+
